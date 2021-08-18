@@ -1,0 +1,289 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+bo
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+/*font styles*/
+@font-face {
+    font-family: 'Roboto';
+    src: url(/blog/fonts/sans-serif/roboto-regular.ttf) format(TrueType);
+    font-weight:normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montsterrat';
+    src: url(/blog/fonts/sans-serif/montserrat-regular.ttf) format(TrueType);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family:'Josefinslab';
+    src: url(/blog/fonts/serif/josefinslab-regular.ttf) format(TrueType);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'rozhaone';
+    src: url(/blog/fonts/serif/rozhaone-regular.ttf) format(TrueType);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Lato;
+    src: url(/blog/fonts/sans-serif/lato-regular.ttf);
+}
+
+html,
+body {
+    font-size: 1rem;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    margin:0 auto;
+    min-width: 56rem;
+    width: 100%;
+    height: 100%;
+    overflow-x:hidden 
+} 
+h1 {
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        letter-spacing: .125rem;
+        font-size: 3.75rem;
+        margin: 1.125rem;
+        text-align: center;
+        transform:rotate(-4deg)
+}
+h2,h3{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+/*header*/
+header{
+    padding-top: 2.5rem;
+    margin-bottom:2.25rem;
+    padding-bottom:2rem;
+    top: -10%;
+    left: -10%;
+    width: 110%;
+}
+.highlight { 
+    background-color: darkred;
+    color:floralwhite;
+    font-family: 'rozhaone', Garamond, serif;
+    font-size: 3.75rem;
+    letter-spacing: .2rem;
+    font-weight: bolder;
+    box-shadow: darkgrey, .313rem .313rem, .313 rem;
+    border-radius: .7rem;
+    border-top-right-radius: .125rem;
+    border-bottom-left-radius: .125rem;
+    border-top-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+
+    
+}
+/*nav*/
+nav {
+    border-bottom: black solid;
+    border-top: black solid;
+    border-width: 100%;
+    padding-bottom: .075rem;
+    padding-top: .075rem;
+    list-style-type: none;
+    font-size: 1.25rem;
+   
+}
+li{ 
+    display:inline-block;
+    margin: 1.5rem
+}
+li a{ 
+    text-decoration: none;
+    color:cornflowerblue;
+    font-size: 110%;
+
+}
+li a:hover{
+    color:firebrick;
+    font-weight: bold;
+    transform: rotate(6deg);
+
+}
+a:link, 
+a:visited {
+    text-decoration: none;
+    color:cornflowerblue;
+}
+a:active{
+    
+    text-decoration: line-through;
+
+}
+.line-through {
+    transform: rotate(6deg);
+}
+.line-through a{
+    text-decoration: line-through,black;
+}
+/*main*/
+h2{
+    padding-top: 1.5rem;
+    padding-left: 2.25rem;
+    font-size: larger;
+    margin-left: .75rem;
+}
+section  {
+    display: flex;
+    margin-left: .75rem;
+    padding-left: 2rem;
+    padding-right: .25rem;
+}
+section p{
+    padding-right:1.75rem;
+    margin-top: 0;
+    line-height: 1;
+
+}
+
+.article-image {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: .25rem;
+    padding-right: .25rem;
+}
+article{
+    min-width: 22rem
+}
+figure{ 
+    margin: 0;
+    padding:0
+}
+
+h3{
+    font-size: .75rem;
+    margin-bottom: 1;
+}
+aside{
+    border-left: black solid,thin;
+    padding-left: 2rem;
+    max-width: 25rem;
+    margin-left: .75rem
+}
+
+aside p{
+    font-size: .75rem;
+    padding-bottom: 2rem;
+    border-bottom:black solid;
+    margin-right: 3rem;
+    padding-right: 1rem;
+}
+aside img{
+    width: 60%;
+    height: auto;
+    margin-right: 0;
+    padding-right: 0;
+}
+.sub-section {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-right: 1rem;
+    padding-left: 0;
+    margin:0
+}
+figure img{
+    width: 95%;
+    height: auto;
+    max-height: 350px;
+    max-width: 305px;
+    object-fit:cover ;
+}
+figcaption{
+    background-color: rgb(228, 212, 181);
+    padding: 0.125rem;
+    width: 90%;
+    
+}
+.button {
+    font-family: 'rohazone', Garamond, serif;
+    text-transform: capitalize;
+    font-size: larger;
+    text-align: center;
+    background-color:navy;
+    color:rgb(228, 212, 181);
+    border:none;
+    padding:.67rem;
+    border-radius: .5rem;
+    width:125px;
+    height: 50px;
+    margin-top: 3rem
+;
+}
+.button a{
+    text-decoration: none;
+    color:rgb(228, 212, 181);
+}
+.button a:hover{
+    cursor: pointer;
+}
+footer{
+    clear:both;
+    padding-bottom: 6rem;
+    padding-top: 8rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+footer p{
+    float:right;
+    text-align: right;
+}
+.copyright{
+    float:left
+}
